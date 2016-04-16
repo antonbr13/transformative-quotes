@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='quoteApp'>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Quotes</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+   </head>
+   <body ng-controller='mainCtrl as main'>
+   <div class="jumbotron">
+      <h1>Transformative Quotes</h1><br>
+      <p>
+         Press the below button to plant the seeds for the revolution.
+      </p>
+
+
+      <button type="button" ng-click="main.makeQuote()" class="btn btn-lg btn-primary" name="button">Spark the Revolution</button><br><br>
+
+
+
+      <div class="quoteblock">
+         <p>
+            {{main.delivery.quote}}
+         </p>
+         <p class="author">
+            {{main.delivery.person}}
+         </p>
+      </div>
+
+
+
+
+
+
+   </div>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js" charset="utf-8"></script>
+
+      <script src="app.js" charset="utf-8"></script>
+      <script src="controller.js" charset="utf-8"></script>
+      <script src="service.js" charset="utf-8"></script>
+
+   </body>
+</html>
